@@ -35,7 +35,7 @@
       <applicationName>cloudhub-app</applicationName>
       <environment>Sandbox</environment>
       <target>Cloudhub-US-East-2</target>
-      <runtimeVersion>${app.runtime}</runtimeVersion>
+      
       <replicas>1</replicas>
       <vCores>0.1</vCores>
       <username>Pavan112211</username>
