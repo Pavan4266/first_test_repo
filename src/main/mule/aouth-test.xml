@@ -22,8 +22,6 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
 		<http:request-connection protocol="HTTPS" host="dummyjson.com" />
 
 	</http:request-config>
-
-	<api-gateway:autodiscovery apiId="20665356" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="1622362f-3427-454d-9868-88ec834922dd" flowRef="Aouth-Testing" />
 	<flow name="Aouth-Testing" doc:id="796abdd7-c197-4a55-9b59-7bad470acef3" >
 
 		<http:listener doc:name="Listener" doc:id="1ff511dd-bd3b-47ce-8659-242ddd80937f" config-ref="HTTP_Listener_config" path="/aouth"/>
