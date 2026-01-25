@@ -32,16 +32,19 @@
 
   <configuration>
     <cloudhub2Deployment>
-      <applicationName>cloudhub-app</applicationName>
+      <uri>https://anypoint.mulesoft.com</uri>
+      <provider>MC</provider>
       <environment>Sandbox</environment>
       <target>Cloudhub-US-East-2</target>
-      
-      <replicas>1</replicas>
-      <vCores>0.1</vCores>
+      <muleVersion>4.10.2</muleVersion>
       <username>Pavan112211</username>
       <password>m7@vEVN6adM@.26</password>
+      <applicationName>cloudhub-app</applicationName>
+      <replicas>1</replicas>
+      <vCores>0.1</vCores>
     </cloudhub2Deployment>
   </configuration>
+
 </plugin>
 
 		</plugins>
