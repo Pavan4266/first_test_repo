@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<mule xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
+
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="edbb2d0f-7855-4d29-87e8-cb9634af783a" >
+
+		<http:listener-connection host="0.0.0.0" port="8081" />
+
+	</http:listener-config>
+
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="8f1030d3-9c2b-49f5-951a-61dc75b7f6c8" >
+
+		<http:request-connection protocol="HTTPS" host="dummyjson.com" />
+
+	</http:request-config>
+	<flow name="Aouth-Testing" doc:id="796abdd7-c197-4a55-9b59-7bad470acef3" >
+
+		<http:listener doc:name="Listener" doc:id="1ff511dd-bd3b-47ce-8659-242ddd80937f" config-ref="HTTP_Listener_config" path="/aouth"/>
+
+		<logger level="INFO" doc:name="Logger" doc:id="18a722dc-66a2-4205-a3f8-1eaf7a915606" message="#[payload]"/>
+
+		<http:request method="GET" doc:name="Request" doc:id="dcfb1e37-79f5-4410-8e8c-5c5fbb3b8823" config-ref="HTTP_Request_configuration" path="/products"/>
+
+		<logger level="INFO" doc:name="Logger" doc:id="8d77fb7a-a445-42ec-b8d0-2ef44a0d1994" message="#[payload]"/>
+
+	</flow>
+
+</mule>
