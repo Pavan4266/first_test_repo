@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>6dcf90cc-91de-4001-ad04-0037d17fd8d9</groupId>
+	<groupId>60fe4e78-dc82-4bd3-8aff-1d4b532f05fc</groupId>
 	<artifactId>aouth-test-ci</artifactId>
 	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
@@ -40,12 +40,13 @@
 						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>4.10.2</muleVersion>
-						<username>Pavan112211</username>
-						<password>m7@vEVN6adM@.26</password>
+						<username>Pavan112222</username>
+						<password>m7@vEVN6adM@.28</password>
 						<applicationName>cloudhub-app</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 					</cloudhub2Deployment>
+					<classifier>mule-application-example</classifier>
 				</configuration>
 
 			</plugin>
